@@ -1,0 +1,24 @@
+---
+id: update-rails-2023-11
+base_name: update-rails-2023-11
+tags:
+- ruby
+presentation_date: '2023-11-27'
+presentation_start_time:
+presentation_end_time:
+version: 2023.11.27.0
+licenses: []
+slideshare_id:
+speaker_deck_id:
+vimeo_id:
+youtube_id:
+width: 1920
+height: 1080
+source_code_uri:
+author:
+  markup_language: :markdown
+  name: Kazuhiro NISHIYAMA
+  email: zn@mbf.nifty.com
+  rubygems_user: znz
+  slideshare_user: znzjp
+  speaker_deck_user: znz
