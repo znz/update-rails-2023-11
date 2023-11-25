@@ -24,15 +24,16 @@ theme
 
 # 対象
 
-- 個人メモ用アプリ
+- 個人メモ用アプリ <https://github.com/znz/memo-app-r>
 - scaffold をちょっと改造した程度の機能のみ
   - ログイン、検索
   - 位置情報 (これが欲しかったので自作)
   - (自分専用なので)メモ本文は生HTMLが書ける
+- Dokku にデプロイ
 
 # 更新バージョン
 
-- Rail 6.1.7.6 → 7.0.8
+- Rail 6.1.7.6 → 7.0.8 → 7.1.2
 - Ruby 3.1.4 → 3.2.2
 
 # 更新方法
@@ -96,3 +97,33 @@ Dokku に deploy すると、なぜか `rake assets:precompile` でエラー
 - `config.load_defaults 7.0` に更新
 - `new_framework_defaults_7_0.rb` を削除
 - デプロイするとログアウトしていたのでログインしなおし
+
+# 7.1 に更新
+
+以下と比較して `Gemfile` を更新
+
+```
+docker run --rm -it ruby:3.2.2 /bin/bash
+gem i rails
+rails new /tmp/hoge --database=postgresql
+```
+
+# app:update
+
+- `bin/rails app:update`
+- Active Storage の migration は除外してマージ
+
+# デプロイ
+
+- テストも問題なく通るのでデプロイ
+- 問題なく動いてそう
+- Rails 7.0 から 7.1 は Rails のバージョンを上げるだけならあっさりできた
+
+# 今後
+
+- `new_framework_defaults_7_1` はまだ未対応なので対応予定
+- JavaScript の位置情報取得部分もテストしたい
+- Rails 標準の minitest を試しているが、単純なテストのみなので rspec と両方にしたい
+- bootstrap 4 のままなので、更新か他のものに移行したい
+- 位置情報取得部分を jQuery から移行したい
+- `coffee-rails` は調査不足で原因不明のままだが `sprockets` を消せば解決すると期待したい
