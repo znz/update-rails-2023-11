@@ -3,6 +3,7 @@ id: update-rails-2023-11
 base_name: update-rails-2023-11
 tags:
 - ruby
+- rails
 presentation_date: '2023-11-27'
 presentation_start_time:
 presentation_end_time:
