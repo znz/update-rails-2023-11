@@ -1,6 +1,6 @@
-# Rails 7.xにバージョンアップした話
+# 小規模個人アプリをRails 7.xにバージョンアップした話
 
-TODO: スライドの説明
+[【出張版】Kyoto.rb Meetup 【大阪だよ】](https://kyotorb.connpass.com/event/296972/)のLT大会での発表資料です。
 
 ## 作者向け
 

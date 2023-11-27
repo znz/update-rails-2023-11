@@ -1,4 +1,4 @@
-# Rails 7.xにバージョンアップした話
+# 小規模個人アプリをRails 7.xにバージョンアップした話
 
 author
 :   Kazuhiro NISHIYAMA
